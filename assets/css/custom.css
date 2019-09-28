@@ -1,0 +1,83 @@
+form {
+    padding-bottom: 3rem;
+}
+
+.alert {
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #33C3F0;
+  padding: 1em;
+}
+
+.listWrapper {
+  margin-top: 2em;
+}
+
+.listWrapper .button {
+  margin-left: 4px;
+}
+
+.listItem {
+  padding: 1em;
+  border-top: 1px solid gray;
+}
+
+.toggleListBtn__container {
+  border-bottom: 1px solid gray;
+  line-height: 1;
+}
+
+.toggleListBtn {
+  background-color: #e2e2e2;
+  padding: 1em 1em 0em;
+  border-top: 1px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.toggleListBtn.active {
+  background-color: #fff;
+}
+
+.toggleListBtn:hover {
+  color: #33C3F0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+header ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+header ul li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+header ul li a {
+  color: #fff;
+  padding:  1em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+a.button.button--small {
+  padding: 0 8px;
+  height: 18px;
+  line-height: 18px;
+}
+
+a.button.button-alert.button--small {
+  background-color: #F44341;
+  border-color: #F4433F;
+}
+
+a.button.button-alert:hover {
+  background-color: #dc3b39;
+  border-color: #dc3b39;
+}

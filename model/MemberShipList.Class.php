@@ -1,11 +1,11 @@
 <?php
 
-class MemberShipList {
+class MembershipList {
   public $members = array();
   const data_src = 'resources/members.json';
 
   public function __construct() {
-    $file = file_get_contents(MemberShipList::data_src);
+    $file = file_get_contents(MembershipList::data_src);
     $this->members = json_decode($file,true);
   }
 
@@ -31,23 +31,16 @@ class MemberShipList {
     foreach ($this->members as $value) {
     }
     foreach ($this->members as $value) {
-      foreach($value['boats'] as $boat){
-        $obj;
-        $boats = array();
-        $obj->id = $boat['id'];
-        $obj->ownerId = $boat['ownerId'];
-        $obj->type = $boat['type'];
-        $obj->length = $boat['length'];
-        array_push($boats, $obj);
-      }
       $member = array(
         'id' => $value['id'],
+        'firstName' => $value['firstName'],
+        'lastName' => $value['lastName'],
+        'birthNumber' => $value['birthNumber'],
         'name' => $value['firstName'] . " " . $value['lastName'],
-        'boats' => $boats
+        'boats' => $value['boats']
       );
       array_push($output, $member);
     }
-    var_dump($output);
     return $output;
   }
 

@@ -1,1 +1,8 @@
-[{"id":"5d8daebc8c50a","ownerId":23,"type":"sailboat","length":"6.30"},{"id":"5d8daebd23100","ownerId":23,"type":"sailboat","length":"6.30"},{"id":"5d8daef8d59e5","ownerId":23,"type":"sailboat","length":6.3},{"id":"5d8daef9117d1","ownerId":23,"type":"sailboat","length":6.3},{"id":"5d8daef9384db","ownerId":23,"type":"sailboat","length":6.3},{"id":"5d8e76610000d","ownerId":"5d8e6f666564e","type":"motorboat","length":5.4},{"id":"5d8e76855dc15","ownerId":"5d8e6f666564e","type":"motorboat","length":5.4},{"id":"5d8e76995c6e3","ownerId":"5d8e6f666564e","type":"motorboat","length":5.4},{"id":"5d8e76f49bd54","ownerId":"5d8e6f666564e","type":"sailboat","length":7.4},{"id":"5d8ee31fa2ea7","ownerId":"5d8e6f666564e","type":"sailboat","length":7.4}]
+[
+    {
+        "id": "5d8f8a7044ae0",
+        "ownerId": "5d8f871515b13",
+        "type": "sailboat",
+        "length": "76"
+    }
+]

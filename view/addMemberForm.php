@@ -1,72 +1,23 @@
-<form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+<h3>Add new member</h3>
+<form action="/">
 
-<p>
-<label>Name
-<input type="text" name="customer_name" required>
-</label>
-</p>
+<div>
+<label>First name</label>
+<input type="text" name="firstName" required>
+</div>
 
-<p>
-<label>Phone
-<input type="tel" name="phone_number">
-</label>
-</p>
+<div>
+<label>Last name</label>
+<input type="text" name="lastName" required>
+</div>
 
-<p>
-<label>Email
-<input type="email" name="email_address">
-</label>
-</p>
+<div>
+<label>Birth number</label>
+<input type="text" name="birthNumber" required>
+</div>
 
-<fieldset>
-<legend>Which taxi do you require?</legend>
-<p><label class="choice"> <input type="radio" name="taxi" required value="car"> Car </label></p>
-<p><label class="choice"> <input type="radio" name="taxi" required value="van"> Van </label></p>
-<p><label class="choice"> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
-</fieldset>
+<input type="hidden" name="formtype" value="addMember">
 
-<fieldset>
-<legend>Extras</legend>
-<p><label class="choice"> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
-<p><label class="choice"> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access </label></p>
-<p><label class="choice"> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
-</fieldset>
-
-<p>
-<label>Pickup Date/Time
-<input type="datetime-local" name="pickup_time" required>
-</label>
-</p>
-
-<p>
-<label>Pickup Place
-<select id="pickup_place" name="pickup_place">
-<option value="" selected="selected">Select One</option>
-<option value="office" >Taxi Office</option>
-<option value="town_hall" >Town Hall</option>
-<option value="telepathy" >We'll Guess!</option>
-</select>
-</label>
-</p>
-
-<p>
-<label>Dropoff Place
-<input type="text" name="dropoff_place" required list="destinations">
-</label>
-
-<datalist id="destinations">
-<option value="Airport">
-<option value="Beach">
-<option value="Fred Flinstone's House">
-</datalist>
-</p>
-
-<p>
-<label>Special Instructions
-<textarea name="comments" maxlength="500"></textarea>
-</label>
-</p>
-
-<p><button>Submit Booking</button></p>
+<input class="button-primary" type="submit" value="Add member">
 
 </form>

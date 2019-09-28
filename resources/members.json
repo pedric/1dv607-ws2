@@ -1,61 +1,15 @@
 [
     {
-        "id": "5d8e6f666564e",
-        "firstName": "Richard",
-        "lastName": "Eriksson",
-        "birthNumber": "4",
+        "id": "5d8f871515b13",
+        "firstName": "Fredrik",
+        "lastName": "Larsson",
+        "birthNumber": "898989",
         "boats": [
             {
-                "id": "5d8e76610000d",
-                "ownerId": "5d8e6f666564e",
-                "type": "motorboat",
-                "length": 5.4
-            },
-            {
-                "id": "5d8e76995c6e3",
-                "ownerId": "5d8e6f666564e",
-                "type": "motorboat",
-                "length": 5.4
-            },
-            {
-                "id": "5d8e76f49bd54",
-                "ownerId": "5d8e6f666564e",
+                "id": "5d8f8a7044ae0",
+                "ownerId": "5d8f871515b13",
                 "type": "sailboat",
-                "length": 7.4
-            },
-            {
-                "id": "5d8ee31fa2ea7",
-                "ownerId": "5d8e6f666564e",
-                "type": "sailboat",
-                "length": 7.4
-            }
-        ]
-    },
-    {
-        "id": "5d8e6f79b940a",
-        "firstName": "Richard",
-        "lastName": "Louis",
-        "birthNumber": "5",
-        "boats": [
-            {
-                "id": "5d8e76610000d",
-                "ownerId": "5d8e6f666564e",
-                "type": "motorboat",
-                "length": 5.4
-            }
-        ]
-    },
-    {
-        "id": "5d8e6fa0bed8f",
-        "firstName": "Richard",
-        "lastName": "Loui",
-        "birthNumber": "5",
-        "boats": [
-            {
-                "id": "5d8e76610000d",
-                "ownerId": "5d8e6f666564e",
-                "type": "motorboat",
-                "length": 5.4
+                "length": "76"
             }
         ]
     }

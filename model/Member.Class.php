@@ -74,7 +74,7 @@ class Member {
       file_put_contents(Member::data_src, $json_string);
     }
 
-    public function addBoat($oId,$boat){
+    public static function addBoat($oId,$boat){
       $file = file_get_contents(Member::data_src);
       $array = json_decode($file,true);
       for($i = 0; $i < count($array);$i++){
@@ -86,21 +86,38 @@ class Member {
       file_put_contents(Member::data_src, $json_string);
     }
 
-    public function deleteMember($id){
+    public static function deleteBoat($oId,$boat){
+      $file = file_get_contents(Member::data_src);
+      $array = json_decode($file,true);
+      for($i = 0; $i < count($array);$i++){
+        if($array[$i]['id'] == $oId){
+          for($j = 0; $j < count($array[$i]['boats']);$j++){
+            var_dump( $array[$i]['boats'][$j]['id'] );
+            if ( $array[$i]['boats'][$j]['id'] == $boat ) {
+              array_splice($array[$i]['boats'],$i,1);
+            }
+          }
+        }
+      }
+      $json_string = json_encode($array,JSON_PRETTY_PRINT);
+      file_put_contents(Member::data_src, $json_string);
+    }
+
+    public static function deleteMember($id){
       $file = file_get_contents(Member::data_src);
       $array = json_decode($file,true);
       $deleted_members_name = null;
       for($i = 0; $i < count($array);$i++){
         if($array[$i]['id'] == $id){
           $deleted_members_name = $array[$i]['firstName'] . " " . $array[$i]['lastName'];
-          array_splice($array,$i);
+          array_splice($array,$i,1);
         }
       }
-      $json_string = json_encode($array);
+      $json_string = json_encode($array,JSON_PRETTY_PRINT);
       file_put_contents(Member::data_src, $json_string);
     }
 
-    public function updateMember($id,$f = null,$l = null,$b = null){
+    public static function updateMember($id,$f = null,$l = null,$b = null){
         $file = file_get_contents(Member::data_src);
         $array = json_decode($file,true);
         for($i = 0; $i < count($array);$i++){
@@ -121,6 +138,18 @@ class Member {
         for($i = 0; $i < count($array);$i++){
           if($array[$i]['id'] == $id){
             $hit = $array[$i];
+          }
+        }
+        return $hit;
+    }
+
+    public static function getMembersBoats($id){
+        $file = file_get_contents(Member::data_src);
+        $array = json_decode($file,true);
+        $hit = false;
+        for($i = 0; $i < count($array);$i++){
+          if($array[$i]['id'] == $id){
+            $hit = $array[$i]['boats'];
           }
         }
         return $hit;
