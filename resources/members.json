@@ -5,5 +5,12 @@
         "lastName": "Larsson",
         "birthNumber": "19661223",
         "boats": []
+    },
+    {
+        "id": "5d8faa4adb576",
+        "firstName": "Fredrik",
+        "lastName": "Larsson",
+        "birthNumber": "19661223",
+        "boats": []
     }
 ]

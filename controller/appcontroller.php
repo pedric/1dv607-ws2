@@ -1,7 +1,7 @@
 <?php
 function autoloader($class_name)
 {
-    include 'model/' . $class_name . '.Class.php';
+    include './model/' . $class_name . '.Class.php';
 }
 
 spl_autoload_register('autoloader');
