@@ -12,7 +12,7 @@ foreach ($verbose_data as $item) {
   $output .= '<div class="listItem">';
   $output .= '<span>' . $item['name'] . '</span>';
   $output .= '<span> (Member id: ' . $item['id'] . ')</span>';
-  $output .= '<a class="button button--small button-primary" href="/?form=editMemberForm&firstName=' . $item['firstName'] .'&lastName=' . $item['lastName'] . '&birthNumber=' . $item['birthNumber'] . '&memberId=' . $item['id'] . '&boats=' . $item['boats'] . '">Edit member</a>';
+  $output .= '<a class="button button--small button-primary" href="/?form=editMemberForm&firstName=' . $item['firstName'] .'&lastName=' . $item['lastName'] . '&birthNumber=' . $item['birthNumber'] . '&memberId=' . $item['id'] . '">Edit member</a>';
   $output .= '<a class="button button-alert button--small button-primary" href="/?formtype=deleteMember&memberId=' . $item['id'] . '">Delete member</a>';
   $output .= '<div>';
   foreach ($item['boats'] as $boat){

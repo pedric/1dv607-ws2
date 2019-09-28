@@ -1,16 +1,1 @@
-[
-    {
-        "id": "5d8f871515b13",
-        "firstName": "Fredrik",
-        "lastName": "Larsson",
-        "birthNumber": "898989",
-        "boats": [
-            {
-                "id": "5d8f8a7044ae0",
-                "ownerId": "5d8f871515b13",
-                "type": "sailboat",
-                "length": "76"
-            }
-        ]
-    }
-]
+[]
