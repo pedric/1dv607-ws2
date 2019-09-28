@@ -1,0 +1,11 @@
+{
+    "name": "fredrik/1dv607-ws2",
+    "description": "Workshop solution",
+    "authors": [
+        {
+            "name": "Fredrik Larsson",
+            "email": "epost.larsson@gmail.com"
+        }
+    ],
+    "require": {}
+}
