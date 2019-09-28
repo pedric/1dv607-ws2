@@ -1,7 +1,7 @@
 <?php
-include_once 'partials/header.php';
-include_once 'controller/appcontroller.php';
-include_once 'controller/formHandler.php';
+include_once __DIR__ . '/partials/header.php';
+include_once __DIR__ . '/controller/appcontroller.php';
+include_once __DIR__ . '/controller/formHandler.php';
 
 if (isset($alert)) {
   echo '<div class="alert">' . $alert . '</div>';
@@ -19,8 +19,8 @@ if (isset($alert)) {
 echo '<div class="container">';
 
 if($form) {
-  include_once 'view/' . $form . '.php';
+  include_once __DIR__ . '/view/' . $form . '.php';
 }
-include_once 'view/lists.php';
+include_once __DIR__ . '/view/lists.php';
 echo '</div>';
-include_once 'partials/footer.php';
+include_once __DIR__ . '/partials/footer.php';
