@@ -25,7 +25,7 @@ class MemberShipList {
      }
      return $output;
    }
-   
+
    public function verboseList(){
     $output = array();
     foreach ($this->members as $value) {
@@ -34,6 +34,8 @@ class MemberShipList {
       foreach($value['boats'] as $boat){
         $obj;
         $boats = array();
+        $obj->id = $boat['id'];
+        $obj->ownerId = $boat['ownerId'];
         $obj->type = $boat['type'];
         $obj->length = $boat['length'];
         array_push($boats, $obj);
