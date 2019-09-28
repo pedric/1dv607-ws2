@@ -19,8 +19,8 @@ if (isset($alert)) {
 echo '<div class="container">';
 
 if($form) {
-  include_once './view/' . $form . '.php';
+  include_once 'view/' . $form . '.php';
 }
-include_once './view/lists.php';
+include_once 'view/lists.php';
 echo '</div>';
 include_once 'partials/footer.php';
