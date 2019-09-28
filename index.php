@@ -181,16 +181,15 @@ class Member {
       $json_string = json_encode($array,JSON_PRETTY_PRINT);
       file_put_contents(Member::data_src, $json_string);
     }
-
+    
     public static function deleteBoat($oId,$boat){
       $file = file_get_contents(Member::data_src);
       $array = json_decode($file,true);
       for($i = 0; $i < count($array);$i++){
         if($array[$i]['id'] == $oId){
           for($j = 0; $j < count($array[$i]['boats']);$j++){
-            var_dump( $array[$i]['boats'][$j]['id'] );
             if ( $array[$i]['boats'][$j]['id'] == $boat ) {
-              array_splice($array[$i]['boats'],$i,1);
+              array_splice($array[$i]['boats'],$j,1);
             }
           }
         }

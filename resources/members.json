@@ -40,5 +40,12 @@
         "lastName": "Larsson",
         "birthNumber": "19661223",
         "boats": []
+    },
+    {
+        "id": "5d8fb3e32d939",
+        "firstName": "Fredrik",
+        "lastName": "Larsson",
+        "birthNumber": "19661223",
+        "boats": []
     }
 ]
