@@ -5,10 +5,16 @@ include_once 'partials/header.php';
 echo "Index!";
 
 $obj1 = new MemberShipList();
-var_dump( $obj1->compactList() );
-
-// $obj = new Member('fred', 'lagesson', '4');
+echo '<pre>';
+$obj1->verboseList();
+echo '</pre>';
+// $boat = new Boat("5d8e6f666564e","sailboat", 7.4);
 //
-// $obj2 = new Boat(23,'sailboat', '6.30');
+// $obj2 = new Member();
+//
+// $obj2->addBoat("5d8e6f666564e",$boat);
+// $obj2->updateMember("5d8e6f79b940a","Richard","Louis");
+
+// echo $form;
 
 include_once 'partials/footer.php';

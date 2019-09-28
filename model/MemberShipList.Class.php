@@ -14,19 +14,39 @@ class MemberShipList {
    */
    public function compactList(){
      $output = array();
-     $obj;
-     foreach ($this->members as $value) {
-       $obj_from_json = json_decode($value);
-       $obj->id = $obj_from_json->id;
-       $obj->name = $obj_from_json->firstName . " " . $obj_from_json->lastName;
-       $obj->num_boats = $obj_from_json->boats;
-       array_push($output, $obj);
+     $members = $this->members;
+     foreach ($members as $value) {
+     $member = array(
+       'id' => $value['id'],
+       'name' => $value['firstName'] . " " . $value['lastName'],
+       'num_boats' => count($value['boats'])
+     );
+     array_push($output, $member);
      }
      return $output;
    }
-
+   
    public function verboseList(){
-
-   }
+    $output = array();
+    foreach ($this->members as $value) {
+    }
+    foreach ($this->members as $value) {
+      foreach($value['boats'] as $boat){
+        $obj;
+        $boats = array();
+        $obj->type = $boat['type'];
+        $obj->length = $boat['length'];
+        array_push($boats, $obj);
+      }
+      $member = array(
+        'id' => $value['id'],
+        'name' => $value['firstName'] . " " . $value['lastName'],
+        'boats' => $boats
+      );
+      array_push($output, $member);
+    }
+    var_dump($output);
+    return $output;
+  }
 
 }

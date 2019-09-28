@@ -56,7 +56,12 @@ class Boat {
   public function saveBoat() {
     $file = file_get_contents(Boat::data_src);
     $array = json_decode($file,true);
-    $new_boat_array = json_encode($this);
+    $new_boat_array = array(
+      'id'=>$this->id,
+      'ownerId'=>$this->ownerId,
+      'type'=>$this->type,
+      'length'=>$this->length,
+    );
     array_push($array,$new_boat_array);
     $json_string = json_encode($array);
     file_put_contents(Boat::data_src, $json_string);
