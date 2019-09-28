@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": "5d8fa782704fe",
+        "firstName": "Fredrik",
+        "lastName": "Larsson",
+        "birthNumber": "19661223",
+        "boats": []
+    }
+]
