@@ -4,9 +4,9 @@ $verbose_data = $list->verboseList();
 $compact_data = $list->compactList();
 
 echo '<div class="listWrapper">';
-echo '<div class="toggleListBtn__container"><span class="toggleListBtn active" data-show="compactList">Compact list</span><span class="toggleListBtn" data-show="verboseList">Verbose list (with edit options)</span></div>';
+echo '<div class="toggleListBtn__container"><span class="toggleListBtn" data-show="compactList">Compact list</span><span class="toggleListBtn active" data-show="verboseList">Verbose list (with edit options)</span></div>';
 
-$output = '<div class="listContainer verboseList" style="display:none;">';
+$output = '<div class="listContainer verboseList">';
 $output .= '<h4 style="margin-top: 20px;">Verbose list</h4>';
 foreach ($verbose_data as $item) {
   $output .= '<div class="listItem">';
@@ -31,7 +31,7 @@ $output .= '</div>';
 echo $output;
 
 $output = '';
-$output = '<div class="listContainer compactList">';
+$output = '<div class="listContainer compactList" style="display:none;">';
 $output .= '<h4 style="margin-top: 20px;">Compact list</h4>';
 foreach ($compact_data as $item) {
   $output .= '<div class="listItem">';
