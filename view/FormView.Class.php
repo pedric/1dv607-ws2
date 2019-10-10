@@ -1,5 +1,11 @@
 <?php
 
+/**
+* FormView
+*
+* @package  view
+* @author   fl222uw
+*/
 class FormView {
 
   private $form;
@@ -27,6 +33,11 @@ class FormView {
       $this->member_info = isset($_GET['memberId']) ? Form::getMemberData($_GET['memberId']) : false ;
   }
 
+  /**
+  * Returns summary of members details as s formatted string
+  *
+  * @return String
+  */
   public function getMemberSummary() {
     $member_summary = '<div style="padding-bottom:1em;">';
     if($this->member_info) {
@@ -39,6 +50,11 @@ class FormView {
     return $member_summary;
   }
 
+  /**
+  * Returns a form chosen from $this->form value
+  *
+  * @return String
+  */
   public function getForm() {
 
     $form_markup = "";

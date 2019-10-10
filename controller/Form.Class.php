@@ -45,7 +45,6 @@ class Form {
   * @param $form_type
   */
   public function handleFormSubmission($form_type) {
-
       // Handle case add member
       if ($form_type === 'addMember') {
         if ( $_GET['firstName'] && $_GET['lastName'] && $_GET['birthNumber'] ) {
@@ -74,7 +73,13 @@ class Form {
       if ($form_type === 'addBoat') {
         if ( $_GET['type'] && $_GET['length'] && $_GET['ownerId'] ) {
           $boat = new Boat($_GET['ownerId'],$_GET['type'],$_GET['length']);
-          Member::addBoat($_GET['ownerId'],$boat);
+          $boat_array = array(
+              "id"  =>  $boat->getId(),
+              "ownerId" => $boat->getOwnerId(),
+              "type" => $boat->getType(),
+              "length" => $boat->getLength()
+          );
+          Member::addBoat($_GET['ownerId'],$boat_array);
         }
       }
       // !end.Handle case add boat

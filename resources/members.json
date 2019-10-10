@@ -3,15 +3,28 @@
         "id": 11,
         "firstName": "Kalle",
         "lastName": "Anka",
-        "birthNumber": "19661223",
+        "birthNumber": "7812236599",
         "boats": [
             {
                 "id": "12",
                 "ownerId": "11",
-                "type": "motorsailer",
-                "length": "10"
+                "type": "kayak or Canoe",
+                "length": "33"
             }
-        ],
-        "birthDate": "1966122322"
+        ]
+    },
+    {
+        "id": 12,
+        "firstName": "Kajsa",
+        "lastName": "Anka",
+        "birthNumber": "8109075445",
+        "boats": [
+            {
+                "id": 14,
+                "ownerId": "12",
+                "type": "motorsailer",
+                "length": "35"
+            }
+        ]
     }
 ]

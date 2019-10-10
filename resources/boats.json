@@ -2,7 +2,13 @@
     {
         "id": 12,
         "ownerId": "11",
+        "type": "kayak or Canoe",
+        "length": "33"
+    },
+    {
+        "id": 14,
+        "ownerId": "12",
         "type": "motorsailer",
-        "length": "10"
+        "length": "35"
     }
 ]
