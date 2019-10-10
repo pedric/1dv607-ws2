@@ -49,6 +49,10 @@ form {
   text-decoration: underline;
 }
 
+.header-wrapper {
+  background: #000;
+}
+
 header ul{
   list-style: none;
   padding: 0;
@@ -82,3 +86,19 @@ a.button.button-alert:hover {
   background-color: #dc3b39;
   border-color: #dc3b39;
 }
+
+.thin-text {
+  font-weight: 100;
+}
+
+input.unvalid {
+  background: #ffd2d2;
+}
+
+input.valid {
+  background: #d2ffdc;;
+ }
+
+ input[disabled] {
+   opacity: 0.5;
+ }

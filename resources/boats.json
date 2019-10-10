@@ -1,8 +1,8 @@
 [
     {
-        "id": "5d8f8a7044ae0",
-        "ownerId": "5d8f871515b13",
-        "type": "sailboat",
-        "length": "76"
+        "id": 12,
+        "ownerId": "11",
+        "type": "motorsailer",
+        "length": "10"
     }
 ]

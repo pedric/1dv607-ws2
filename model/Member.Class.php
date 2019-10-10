@@ -1,15 +1,21 @@
 <?php
 
+/**
+* Member
+*
+* @package  model
+* @author   fl222uw
+*/
 class Member {
-  public $id;
-  public $firstName;
-  public $lastName;
-  public $birthNumber;
-  public $boat;
+  private $id;
+  private $firstName;
+  private $lastName;
+  private $birthNumber;
+  private $boat;
   const data_src = 'resources/members.json';
 
   public function __construct($f = null,$l = null,$b = null) {
-    $this->id = uniqid();
+    $this->id = $this->getMemberId($f,$l);
     if(isset($f)){$this->firstName = $f;}
     if(isset($l)){$this->lastName = $l;}
     if(isset($b)){$this->birthNumber = $b;}
@@ -19,7 +25,6 @@ class Member {
   /*
    * Getters
    */
-
    public function getFullName(){
      return $this->firstName . " " . $this->lastName;
    }
@@ -55,9 +60,29 @@ class Member {
       $this->birthNumber = $n;
     }
 
-    /*
-     * Other methods
+    /**
+     * Generates a member id for new member based on initials
+     *
+     * @param $f,$l
      */
+     public function getMemberId($f,$l){
+       $file = file_get_contents(Member::data_src);
+       $array = json_decode($file,true);
+       $swe_alphabet = "abcdefghijklmnopqrstuwxyzåäö";
+       if($f && $l) {
+          $first_name_initial_char = strtolower(substr($f,0,1));
+          $last_name_initial_char = strtolower(substr($l,0,1));
+          $initials_as_number = strpos($swe_alphabet , $first_name_initial_char) + strpos($swe_alphabet , $last_name_initial_char);
+          return $initials_as_number + count($array) + 1;
+       } else {
+         return rand(0,9) + count($array) + 1;
+       }
+
+     }
+
+    /**
+    * Saves member to json file, called diretly from constructor
+    */
     public function saveMember(){
       $file = file_get_contents(Member::data_src);
       $array = json_decode($file,true);
@@ -74,6 +99,11 @@ class Member {
       file_put_contents(Member::data_src, $json_string);
     }
 
+    /**
+    * Add new boat object to member
+    *
+    * @param $oId,$boat
+    */
     public static function addBoat($oId,$boat){
       $file = file_get_contents(Member::data_src);
       $array = json_decode($file,true);
@@ -103,6 +133,9 @@ class Member {
       file_put_contents(Member::data_src, $json_string);
     }
 
+    /**
+    * Delete member
+    */
     public static function deleteMember($id){
       $file = file_get_contents(Member::data_src);
       $array = json_decode($file,true);
@@ -117,6 +150,11 @@ class Member {
       file_put_contents(Member::data_src, $json_string);
     }
 
+    /**
+    * Updates members data
+    *
+    * @param $id,$f,$l,$b
+    */
     public static function updateMember($id,$f = null,$l = null,$b = null){
         $file = file_get_contents(Member::data_src);
         $array = json_decode($file,true);
@@ -131,7 +169,13 @@ class Member {
         file_put_contents(Member::data_src, $json_string);
     }
 
-    public function getMember($id){
+    /**
+    * Returns member object
+    *
+    * @param $id
+    * @return Object
+    */
+    public static function getMember($id){
         $file = file_get_contents(Member::data_src);
         $array = json_decode($file,true);
         $hit = false;
@@ -143,6 +187,12 @@ class Member {
         return $hit;
     }
 
+    /**
+    * Returns members boats object
+    *
+    * @param $id
+    * @return Object
+    */
     public static function getMembersBoats($id){
         $file = file_get_contents(Member::data_src);
         $array = json_decode($file,true);

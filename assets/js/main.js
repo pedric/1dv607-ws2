@@ -1,4 +1,4 @@
-console.log('main.js loaded');
+
 var lists = document.getElementsByClassName('listContainer');
 var toggleBtn = document.getElementsByClassName('toggleListBtn');
 for (var i = 0; i < toggleBtn.length; i++) {
@@ -17,5 +17,27 @@ function toggleList(){
   var classToShow = document.getElementsByClassName(this.getAttribute('data-show'));
   for (var i = 0; i < classToShow.length; i++) {
     classToShow[i].style.display = 'block';
+  }
+}
+
+
+// Control birth date input
+var input = document.querySelectorAll('input[name="birthNumber"]')[0];
+if(input){input.classList.add('unvalid');}
+var btn = document.getElementsByClassName('member-btn')[0];
+
+if(input) {input.addEventListener('keyup', controlFormat);}
+
+function controlFormat(e) {
+  if(input){
+    if( !input.value.match(/[0-9]/) ) {
+      input.classList.remove('valid');
+      input.classList.add('unvalid');
+      btn.setAttribute('disabled', '');
+    } else if ( !input.value.match(/[a-zA-Z]/) && input.value.length == 10) {
+      input.classList.remove('unvalid');
+      input.classList.add('valid');
+      btn.removeAttribute('disabled');
+    }
   }
 }

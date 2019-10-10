@@ -1,7 +1,13 @@
 <?php
 
+/**
+* MemberShipList
+*
+* @package  model
+* @author   fl222uw
+*/
 class MembershipList {
-  public $members = array();
+  private $members = array();
   const data_src = 'resources/members.json';
 
   public function __construct() {
@@ -9,8 +15,10 @@ class MembershipList {
     $this->members = json_decode($file,true);
   }
 
-  /*
-   * Lists
+   /**
+   * Returns data for a compact list
+   *
+   * @return array
    */
    public function compactList(){
      $output = array();
@@ -26,6 +34,11 @@ class MembershipList {
      return $output;
    }
 
+   /**
+   * Returns data for a verbose list
+   *
+   * @return array
+   */
    public function verboseList(){
     $output = array();
     foreach ($this->members as $value) {

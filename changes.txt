@@ -1,0 +1,14 @@
+This summarize the changes made after the peer review process.
+
+TODO
+• Add the missing sequence diagram.
+• Update class diagram after adding classes.
+
+
+DONE
+• Remove some critical code that was not bound to any class in the controller and view and handle it within new classes for this.
+• Shortened member- and boat id.
+• add missing ability to edit/update boat.
+• control input format for birth date.
+• Fix encapsulation (access modifiers).
+• Comment code for better understanding of the flow.
